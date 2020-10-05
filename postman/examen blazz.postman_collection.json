@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "69c06571-3ae4-4dc0-b5eb-2936ea4a9848",
+		"name": "examen blazz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllPerson",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://heroku-app-111-222.herokuapp.com/api/persons",
+					"protocol": "https",
+					"host": [
+						"heroku-app-111-222",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postSavePerson",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1001\",\r\n    \"first_name\":\"testname\",\r\n    \"last_name\":\"testlastname\",\r\n    \"email\":\"test3@test\",\r\n    \"phone\":999142444\r\n\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://heroku-app-111-222.herokuapp.com/api/save",
+					"protocol": "https",
+					"host": [
+						"heroku-app-111-222",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putUpdatePerson",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\":\"Carlos2\",\r\n    \"last_name\":\"Lazaro1\",\r\n    \"email\":\"priueba@tesasdat.com\",\r\n    \"phone\":12345234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://heroku-app-111-222.herokuapp.com/api/update/1001",
+					"protocol": "https",
+					"host": [
+						"heroku-app-111-222",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"update",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
